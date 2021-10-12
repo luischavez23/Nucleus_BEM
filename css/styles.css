@@ -1,8 +1,8 @@
 :root {
     --first: #6834a6;
-    --second: #633699;
+    --second: #5A30A0;
     --white: #FFF;
-    --black: #000000;
+    --black: #705c5c;
     --fontMain: 'Poppins', sans-serif;
 }
 html {
@@ -107,6 +107,9 @@ img {
         font-size: 1.6rem;
         color:var(--white);
     }
+}
+.navbar__link--footer{
+    color: var(--white);
 }
 @media (min-width: 768px){
     .header__description{
@@ -307,6 +310,45 @@ img {
     line-height: 1.5;
 }
 
+/* Opinions */
+.opinions{
+    background-color: var(--first);
+    padding: 4rem 0;
+}
+.opinions__heading{
+    text-align: center;
+    color: var(--white);
+}
+.opinion{
+    background-color: var(--white);
+    padding: 3rem 3rem 3rem 6rem;
+    margin: 4rem 0;
+    position: relative;
+}
+.opinion::before{
+    content:'';
+    position: absolute;
+    background-image: url(../img/comilla.png);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    height: 3rem;
+    width: 3rem;
+    top: 3rem;
+    left: 2rem;
+}
+@media (min-width: 768px){
+    .opinions__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    } 
+}
+.opinion__author{
+    color: var(--first);
+    font-weight: 700;
+    text-align: right;
+}
+
 /* Footer */
 .footer{
     background-color: var(--second);
@@ -331,7 +373,4 @@ img {
     .navbar{
         padding-bottom: 0;
     }
-}
-.navbar__link{
-    color: var(--white);
 }
